@@ -1,0 +1,69 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-submenu nzTitle="Team" nzIcon="team">
+        <ul>
+          <li nz-menu-item>Bryan Cruz</li>
+          <li nz-menu-item>James Dumitru</li>
+          <li nz-menu-item>Raymond Ezekiel</li>
+          <li nz-menu-item>Andy Kukuc</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Code" nzIcon="coffee">
+        <ul>
+          <li nz-menu-item>Java</li>
+          <li nz-menu-item>Python</li>
+          <li nz-menu-item>R</li>
+          <li nz-menu-item>Angular</li>
+          <li nz-menu-item>Vanilla</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Design" nzIcon="rocket">
+        <ul>
+          <li nz-menu-item>UX Design</li>
+          <li nz-menu-item>UI Design</li>
+        </ul>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="file"></i>
+        <span>File</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <i
+        class="trigger"
+        nz-icon
+        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        (click)="isCollapsed = !isCollapsed"
+      ></i>
+    </nz-header>
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>Projects</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="inner-content">
+        <div nz-row>
+          <div nz-col [nzXs]="{ span: 5, offset: 1 }" [nzLg]="{ span: 6, offset: 2 }">
+            <card></card>
+          </div>
+          <div nz-col [nzXs]="{ span: 11, offset: 1 }" [nzLg]="{ span: 6, offset: 2 }">
+            <card></card>
+          </div>
+          <div nz-col [nzXs]="{ span: 5, offset: 1 }" [nzLg]="{ span: 6, offset: 2 }">
+            <card></card>
+          </div>
+        </div>
+      </div>
+    </nz-content>
+    <nz-footer
+      >© All rights reserved. Made with ❤ by
+      <a href="https://github.com/TheGreatestHackers"
+        >TheGreatestHackers</a
+      ></nz-footer
+    >
+  </nz-layout>
+</nz-layout>
